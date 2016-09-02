@@ -42,7 +42,7 @@ class personCell: UITableViewCell {
         if person.PersonAge > 30 {
             if person.PersonGender == "male" {
             if person.PersonBreathingProblems &&  person.PersonIsDiabetic {
-                hearattckLbl.text = "\(person.PersonName) is will have a hearttack"
+                hearattckLbl.text = "\(person.PersonName) will have a hearttack"
                 }
             } else {
                 //greater than 30 but female
@@ -70,6 +70,8 @@ class personCell: UITableViewCell {
                 if person.PersonIsDiabetic {
                     hearattckLbl.text = "\(person.PersonName) might get a heart attack"
                 }
+            } else {
+                hearattckLbl.text = "\(person.PersonName) is unlikely to get heart attack"
             }
         }
         
