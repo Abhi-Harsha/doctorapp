@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var personnametext: UITextField!
     @IBOutlet weak var personagetext: UITextField!
@@ -19,7 +19,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        personnametext.delegate = self
+        personagetext.delegate = self
+        personnametext.returnKeyType = .Done
+        personagetext.returnKeyType = .Done
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,8 +30,31 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+       if identifier == "personDetailsVC"{
+        if personnametext.text == nil || personnametext.text == "" {
+            personnamevalidationtext.hidden = false
+            return false
+        }
+    }
+        return true
+    }
     
-
+    func textFieldDidBeginEditing(textField: UITextField) {
+        personnamevalidationtext.hidden = true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    
+    
+    
+    
+    
+    
 
 }
 
