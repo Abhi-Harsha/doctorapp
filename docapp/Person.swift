@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Person {
+class Person: NSObject, NSCoding {
     private var _name: String!
     
     private var _gender: String?
@@ -32,14 +32,14 @@ class Person {
         return _name
     }
     
-    var PersonGender: String {
+    var PersonGender: String? {
         if let gender = _gender{
             return gender
         }
         return ""
     }
     
-    var PersonAge: Int {
+    var PersonAge: Int? {
         if let age = _age{
             return age
         }
@@ -58,6 +58,28 @@ class Person {
             return diabetic
         }
         return false
+    }
+    
+    override init(){
+        
+    }
+    
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        self.init()
+        self._name = aDecoder.decodeObjectForKey("name") as? String
+        self._age = aDecoder.decodeObjectForKey("age") as? Int
+        self._gender = aDecoder.decodeObjectForKey("gender") as? String
+        self._hasBreathingProblems = aDecoder.decodeObjectForKey("breathingpro") as? Bool
+        self._isDiabetic = aDecoder.decodeObjectForKey("isdiabetic") as? Bool
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(self._name, forKey: "name")
+        aCoder.encodeObject(self._age, forKey: "age")
+        aCoder.encodeObject(self._gender, forKey: "gender")
+        aCoder.encodeObject(self._hasBreathingProblems, forKey: "breathingpro")
+        aCoder.encodeObject(self._isDiabetic, forKey: "isdiabetic")
     }
     
 }

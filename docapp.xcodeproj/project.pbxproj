@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A00AA6891D79BB6A003A9EE8 /* personCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00AA6881D79BB6A003A9EE8 /* personCell.swift */; };
+		A079CEBF1D79D9ED00A11503 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079CEBE1D79D9ED00A11503 /* HelperMethods.swift */; };
 		A07D06681D79ADB900FB6097 /* PersonDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07D06671D79ADB900FB6097 /* PersonDetailsVC.swift */; };
 		A08D845D1D795EDB00ACD491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08D845C1D795EDB00ACD491 /* AppDelegate.swift */; };
 		A08D845F1D795EDC00ACD491 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08D845E1D795EDC00ACD491 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		A00AA6881D79BB6A003A9EE8 /* personCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personCell.swift; sourceTree = "<group>"; };
+		A079CEBE1D79D9ED00A11503 /* HelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		A07D06671D79ADB900FB6097 /* PersonDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsVC.swift; sourceTree = "<group>"; };
 		A08D84591D795EDA00ACD491 /* docapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = docapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08D845C1D795EDB00ACD491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A079CEBD1D79D9CC00A11503 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A079CEBE1D79D9ED00A11503 /* HelperMethods.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		A08D84501D795ED900ACD491 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		A08D845B1D795EDB00ACD491 /* docapp */ = {
 			isa = PBXGroup;
 			children = (
+				A079CEBD1D79D9CC00A11503 /* Util */,
 				A08D846E1D795EFC00ACD491 /* Model */,
 				A08D846F1D795F0C00ACD491 /* View */,
 				A08D84701D795F1400ACD491 /* Controller */,
@@ -170,6 +181,7 @@
 			files = (
 				A08D84721D79603300ACD491 /* Person.swift in Sources */,
 				A00AA6891D79BB6A003A9EE8 /* personCell.swift in Sources */,
+				A079CEBF1D79D9ED00A11503 /* HelperMethods.swift in Sources */,
 				A08D845F1D795EDC00ACD491 /* ViewController.swift in Sources */,
 				A07D06681D79ADB900FB6097 /* PersonDetailsVC.swift in Sources */,
 				A08D845D1D795EDB00ACD491 /* AppDelegate.swift in Sources */,
